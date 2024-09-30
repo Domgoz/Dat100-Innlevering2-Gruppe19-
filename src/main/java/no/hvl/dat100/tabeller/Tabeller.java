@@ -8,7 +8,7 @@ public class Tabeller {
 			System.out.print(tabell[i] + " ");
 		 }
 	 }
-	}
+	
 
 	// b)
 	public static String tilStreng(int[] tabell) {
