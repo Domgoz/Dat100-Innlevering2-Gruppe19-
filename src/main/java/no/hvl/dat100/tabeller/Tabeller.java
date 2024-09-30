@@ -1,5 +1,7 @@
 package no.hvl.dat100.tabeller;
 
+import java.util.Arrays;
+
 public class Tabeller {
 
 	// a)
@@ -12,9 +14,7 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		return Arrays.toString(tabell).replace(" ", "");
 	}
 
 	// c)
