@@ -1,6 +1,7 @@
 package no.hvl.dat100.tabeller;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class Tabeller {
 
@@ -19,17 +20,14 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int sum = IntStream.of(tabell).sum();
+		System.out.println("Summen er " + sum);
+		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		return Arrays.stream(tabell).anyMatch(n -> n == tall);
 	}
 
 	// e)
