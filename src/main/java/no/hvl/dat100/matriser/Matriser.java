@@ -72,12 +72,6 @@ public class Matriser {
 		}
 		return nym;
 	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-		
-	
-	}
 }
 
 
