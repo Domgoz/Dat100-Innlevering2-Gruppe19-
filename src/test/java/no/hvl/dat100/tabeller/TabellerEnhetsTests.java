@@ -1,9 +1,6 @@
 package no.hvl.dat100.tabeller;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -88,7 +85,7 @@ class TabellerEnhetsTests {
 		assertFalse(tabell2 == reversert2);
 		assertArrayEquals(tabell2, reversert2);
 		
-		assertFalse(tabell1 == reversert1);
+		assertFalse(tabell3 == reversert3);
 		assertArrayEquals(tabell3, reversert3);
 	}
 

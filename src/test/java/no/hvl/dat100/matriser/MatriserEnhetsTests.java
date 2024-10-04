@@ -1,9 +1,6 @@
 package no.hvl.dat100.matriser;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -91,6 +88,21 @@ class MatriserEnhetsTests {
 		
 		assertFalse(speile == a);
 		assertArrayEquals(speilet,speile);
+	}
+	
+	@Test 
+	void testMultipliser () {
+
+		int[][] ab = { {84,90,96}, {201,216,231}, {318,342,366} };
+
+		int[][] multiplisert = Matriser.multipliser(a,b);
+		
+		assertArrayEquals(ab,multiplisert);
+				
+		int[][] ca = { {30,36,42}, {66,81,96}, {102,126,150}, {138,171,204} };
+		multiplisert = Matriser.multipliser(c,a);
+		assertArrayEquals(ca,multiplisert);
+		
 	}
 	
 	@Test
