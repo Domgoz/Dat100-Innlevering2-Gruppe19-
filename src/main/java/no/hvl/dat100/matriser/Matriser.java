@@ -30,7 +30,7 @@ public class Matriser {
 			//  sluttsymbol + newline
 		}
 		return s;
-		}
+	}
 		
 	
 	// c)
@@ -71,6 +71,20 @@ public class Matriser {
 			}
 		}
 		return nym;
+	}
+
+
+	// f)
+	public static int[][] multipliser(int[][] a, int[][] b) {
+		int[][] ny = new int[a.length][b.length];
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < b[0].length; j++) {
+				for (int k = 0; k < b.length; k++) {
+					ny[i][j] += a[i][k]*b[k][j];
+				}
+	}
+	}
+		return ny;
 	}
 }
 
