@@ -1,7 +1,5 @@
 package no.hvl.dat100.tabeller;
 
-import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class Tabeller {
 
@@ -15,19 +13,31 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-		return Arrays.toString(tabell).replace(" ", "");
+		if (tabell.length == 0) {return "[]";};
+		String s = "[";
+		for (int i = 0; i < (tabell.length - 1); i ++) {
+			s = s + "" + tabell[i] + ",";
+		}
+	    return s + tabell[tabell.length-1] + "]";
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
-		int sum = IntStream.of(tabell).sum();
-		System.out.println("Summen er " + sum);
+		int sum = 0;
+		for (int eger: tabell) {
+			sum += eger;
+		}
 		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-		return Arrays.stream(tabell).anyMatch(n -> n == tall);
+		for (int eger: tabell) {
+			if (eger == tall) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	// e)
@@ -69,7 +79,7 @@ public class Tabeller {
 		int[][] tabeller = {tabell1, tabell2}; 
 		// ovenfor kunne 
 		// metoden vært modifisert for å sette
-		// sammen flere liste
+		// sammen flere tabeller
 		int sist = 0;
 		for (int[] tab: tabeller) {
 			for (int i = sist; i < sist + tab.length; i ++) {
